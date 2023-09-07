@@ -1,4 +1,4 @@
-***Summary***
+**Summary**
 
 The provided HTML document is an exercise template, aiming to help you refine your web design skills, with a focus on CSS styling and JavaScript interactivity. The content revolves around the theme "All About Physics."
 
