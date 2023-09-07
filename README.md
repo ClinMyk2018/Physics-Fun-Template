@@ -1,6 +1,8 @@
 # Physics-Fun-Template
 This is a repo for instructional purposes
 
+### (Remember to branch out, so when you are making changes and commiting your solution, it is not to the altering the main branch files)
+
 Begin by reading the doc about the project to understand what is expected
 - [Project Explanation](https://github.com/ClinMyk2018/Physics-Fun-Template/blob/main/Physics-Fun-B-Explain.md)
 
