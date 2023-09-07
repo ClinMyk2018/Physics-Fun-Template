@@ -1,0 +1,300 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All About Physics</title>
+
+    <style>
+        /* 
+            Add styles for the page here
+
+                Basics that you will need:
+                    - A color Theme for the page
+                    - A font family for the page
+                    - A set of font sizes for the page
+
+                Example css variables:
+                    :root {
+                        --main-color: #000000;
+                        --main-font-family: Arial, Helvetica, sans-serif;
+                        --main-font-size: 16px;
+                    }
+
+                For the sections, you will need to use parent classes:
+                    - .main-container
+                    - .page-header
+                    - .page-main
+                    - .page-right-rail
+                    - .page-footer
+
+                Example classes:
+                    .main-container {
+                        display: flex;
+                        width: 100%;
+                        height: 100%;
+                        background-color: var(--main-color);
+                        font-family: var(--main-font-family);
+                        font-size: var(--main-font-size);
+                    }
+
+                For the navbar, you will need to use the following classes:
+                    - .navbar
+                    - .navbar-item
+
+                For the cards, you will need to use the following classes:
+                    - .card
+                    - .card-title
+                    - .card-description
+                    - .card-link
+
+                Example classes:
+                    .card {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #ffffff;
+                        border-radius: 5px;
+                        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+                    }
+
+                For the footer, you will need to use the following classes:
+                    - .footer-left
+                    - .footer-right
+
+                Other helpful classes to consider:
+
+                    For the links, you will need to use the following classes:
+                        - .link
+
+                    For the titles, you will need to use the following classes:
+                        - .title
+                        - .subtitle
+
+                    For the paragraphs, you will need to use the following classes:
+                        - .paragraph
+                
+                
+                Effects to consider:
+                    - A hover effect for the navbar items
+                    - A hover effect for the cards
+
+                    .navbar-item:hover {
+                        background-color: #ffffff;
+                        color: #000000;
+                    }
+                    
+                - An animation for the content load
+
+                    @keyframes content-load {
+                        0% {
+                            opacity: 0;
+                        }
+                        100% {
+                            opacity: 1;
+                        }
+                    }
+
+                    .page-main {
+                        animation: content-load 1s ease-in-out;
+                    }
+        */
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- 
+            
+        !!! Recommend using semantic HTML elements like <nav>, <main>, <aside>, and <footer> for better accessibility and SEO !!!
+            
+            create a layout that contains the following features:
+
+                - a fixed page header with a navbar that has the following options:
+                    - Home
+                    - About Physics
+                    - Examples
+
+                Example:
+                    <div class="page-header">
+                        (Maybe add the words `Physics Fun` positioned left, right or center in the header)
+                            - (new class like `page-header_text`)
+                        <div class="navbar">
+                        (Remeber the flex layout - props like `justify-content` help)
+                            nav-items (Home, About Physics, Examples)
+                        </div>
+                    </div>
+
+                - a main section that contains the following:
+                    - a title that is set by the page (Physics Home, About Physics, Examples)
+                    - a paragraph that is set by the page (Home, About Physics, Examples)
+                
+                Example:
+                    <div class="page-main">
+                    (Remeber the idea of the flex layout)
+                        Title
+                        Paragraph
+                    </div>
+
+                - a right side rail that contains the following:
+                    - a collection of cards that talk about physics
+                    - each card should have a title, and description
+                    - each card should have a link to a wikipedia article about the topic
+                    - the cards should be styled to look like a modern UI card
+
+                - a footer that contains the following:
+
+                    - a left section that contains the following:
+                        - Your name
+                        - Your Github Username
+                        - Your Github Profile Link (Github Image)
+
+                    - a right section that contains the following:
+                        - The current year
+                        - Links to other resources (W3Schools, MDN, etc.)
+
+                Example layout:
+                <div class="page-footer">
+                (Remeber the flex layout - left / right)
+                    footer-left
+                    footer-right
+                </div>
+
+        -->
+
+    </div>
+</body>
+<script>
+    /* 
+        Add javascript for the page here !!!!!
+
+            Basics that you will need:
+                - A way to get the current year
+                - A way to get the current page
+                - A way to set the title and paragraph for the page
+                - A way to set the title and description for the cards
+                - A way to set the link for the cards
+
+            Example javascript variables:
+                const year = new Date().getFullYear();
+                const page = window.location.pathname;
+                const title = "Physics Home";
+                const paragraph = "This is the home page for the physics website.";
+
+            For the cards, you will need to use the following variables:
+                const cardTitle = "Physics";
+                const cardDescription = "Physics is the natural science that studies matter, its motion and behavior through space and time, and the related entities of energy and force. Physics is one of the most fundamental scientific disciplines, and its main goal is to understand how the universe behaves.";
+                const cardLink = "https://en.wikipedia.org/wiki/Physics";
+
+            For the footer, you will need to use the following variables:
+                const name = "Your Name";
+                const githubUsername = "Your Github Username";
+                const githubProfileLink = "
+                const w3schoolsLink = "https://www.w3schools.com/";
+                const mdnLink = "https://developer.mozilla.org/en-US/";
+
+            Other helpful variables to consider:
+                const homePage = "/";
+                const aboutPage = "/about";
+                const examplesPage = "/examples";
+
+            Other helpful functions to consider:
+                - CTA for the navbar items
+                - Functions to make the code more readable
+
+        STEP 1:
+
+            Example javascript functions:
+                function setYear() {
+                    document.getElementById("year").innerHTML = year;
+                }
+
+                function setPage() {
+                    if (page === homePage) {
+                        document.getElementById("title").innerHTML = "Physics Home";
+                        document.getElementById("paragraph").innerHTML = "This is the home page for the physics website.";
+                    } else if (page === aboutPage) {
+                        document.getElementById("title").innerHTML = "About Physics";
+                        document.getElementById("paragraph").innerHTML = "This is the about page for the physics website.";
+                    } else if (page === examplesPage) {
+                        document.getElementById("title").innerHTML = "Examples";
+                        document.getElementById("paragraph").innerHTML = "This is the examples page for the physics website.";
+                    }
+                }
+
+        STEP 2:
+
+            Maybe create collections to make the code more readable:
+                const pages = [
+                    {
+                        page: homePage,
+                        title: "Physics Home",
+                        paragraph: "This is the home page for the physics website."
+                    },
+                    {
+                        page: aboutPage,
+                        title: "About Physics",
+                        paragraph: "This is the about page for the physics website."
+                    },
+                    {
+                        page: examplesPage,
+                        title: "Examples",
+                        paragraph: "This is the examples page for the physics website."
+                    }
+                ];
+
+                function setPage() {
+                    pages.forEach(page => {
+                        if (page.page === window.location.pathname) {
+                            document.getElementById("title").innerHTML = page.title;
+                            document.getElementById("paragraph").innerHTML = page.paragraph;
+                        }
+                    });
+                }
+
+            Maybe create a function to set the cards:
+                const cards = [
+                    {
+                        title: "Physics",
+                        description: "Physics is the natural science that studies matter, its motion and behavior through space and time, and the related entities of energy and force. Physics is one of the most fundamental scientific disciplines, and its main goal is to understand how the universe behaves.",
+                        link: "https://en.wikipedia.org/wiki/Physics"
+                    },
+                    {
+                        title: "Classical Mechanics",
+                        description: "Classical mechanics is a physical theory describing the motion of macroscopic objects, from projectiles to parts of machinery, and astronomical objects, such as spacecraft, planets, stars and galaxies.",
+                        link: "https://en.wikipedia.org/wiki/Classical_mechanics"
+                    },
+                    {
+                        title: "Quantum Mechanics",
+                        description: "Quantum mechanics is a fundamental theory in physics that provides a description of the physical properties of nature at the scale of atoms and subatomic particles.",
+                        link: "https://en.wikipedia.org/wiki/Quantum_mechanics"
+                    }
+                ];
+
+                function setCards() {
+                    cards.forEach(card => {
+                        const cardElement = document.createElement("div");
+                        cardElement.classList.add("card");
+
+                        const cardTitleElement = document.createElement("h2");
+                        cardTitleElement.classList.add("card-title");
+                        cardTitleElement.innerHTML = card.title;
+
+                        const cardDescriptionElement = document.createElement("p");
+                        cardDescriptionElement.classList.add("card-description");
+                        cardDescriptionElement.innerHTML = card.description;
+
+                        const cardLinkElement = document.createElement("a");
+                        cardLinkElement.classList.add("card-link");
+                        cardLinkElement.innerHTML = "Learn More";
+                        cardLinkElement.href = card.link;
+
+                        cardElement.appendChild(cardTitleElement);
+                        cardElement.appendChild(cardDescriptionElement);
+                        cardElement.appendChild(cardLinkElement);
+
+                        document.getElementById("page-right-rail").appendChild(cardElement);
+                    });
+                }
+    
+    */
+</script>
+</html>
